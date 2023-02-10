@@ -44,6 +44,27 @@ header h2 {
     font-size: 1.7vw;
 }
 
+figcaption {
+    color: white;
+    font-size: 1.5vw;
+}
+
+p {
+    color: white;
+    font-size: 40px;
+    padding: 20px;
+    line-height: 40px;
+    font-family: 'Kanit', sans-serif;
+}
+
+#biopar {
+    color: white;
+    font-size: 40px;
+    padding: 20px;
+    line-height: 30px;
+    font-family: 'Kanit', sans-serif;
+}
+
 nav ul {
     list-style: none;
     padding-left: 0px;
