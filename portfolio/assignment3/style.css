@@ -17,71 +17,45 @@ html {
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 
 body {
-    background: grey ;
+    line-height: normal;
+    background-image: linear-gradient(pink, blue, gold);
+    background-attachment: fixed;
+}
+
+
+#container {
+	width:90%;
+	margin:auto;
 }
 
 figure {
-    margin: 0px;
+	margin:auto;
 }
 
 figure img {
-    width: 100%;
+	width: 100%;
+    max-height: 50%;
 }
 
-#bioimg {
-    width: 100%;
-    max-width: 300px;
+.mobile {
+    background: yellow;
 }
 
-header h1 {
-    color: white;
-    font-size: 5vw;
-    font-family: 'Unbounded', cursive;
+.desktop {
+    display: none;
 }
 
-header h2 {
-    color: white;
-    font-size: 1.7vw;
-}
-
-figcaption {
-    color: white;
-    font-size: 1.5vw;
-}
-
-p {
-    color: white;
-    font-size: 40px;
-    padding: 20px;
-    line-height: 40px;
+nav section {
+	border:2px solid black;
+    margin-bottom: 15px;
     font-family: 'Kanit', sans-serif;
+    font-size: 1.2rem;
 }
 
-#biopar {
-    color: white;
-    font-size: 40px;
-    padding: 20px;
-    line-height: 30px;
-    font-family: 'Kanit', sans-serif;
+nav section p {
+    padding: 3px;
 }
 
-nav ul {
-    list-style: none;
-    padding-left: 0px;
-}
-
-nav a {
-    text-decoration: none;
-    display: block;
-    color: blue;
-    text-align: center;
-    padding: 6px;
-    margin-bottom: 3px;
-}
-
-nav a:hover {
-    background: black;
-}
 
 /* Class for making YouTube/Vimeo videos responsive */
 
@@ -132,20 +106,23 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
-    #two-column {
-        display: flex;
-    }
+	
+	#container {
+		width:80%;
+	}
 
-    nav, main {
-        border: 1px solid black;
+    .mobile {
+        display: none;
+        }
+    
+    .desktop {
+        display: block;
     }
 
     nav {
-        flex: 0.75;
-    }
-
-    main {
-        flex: 2.5;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 15px;
     }
 } /* closes 769px+ */
 
@@ -153,8 +130,8 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 /* Minimum width for desktop screens. */
 @media all and (min-width: 1024px) {
-    #container {
-        width: 900px;
-        margin: auto;
+	nav {
+        grid-template-columns: repeat(3, 1fr);
     }
+	
 } /* closes 1024px+ */
