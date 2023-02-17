@@ -16,10 +16,41 @@ html {
 
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 
+#menush {
+height: auto;
+text-align: center;
+display: flex;
+flex-flow: column;
+}
+
+header nav {
+    margin-top: 1rem;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+header button {
+    height: 4rem;
+    width: 6rem;
+    background-color: transparent;
+}
+
+footer {
+    text-align: center;
+}
+
+header #drop-content {
+    position: absolute;
+}
+
 body {
     line-height: normal;
     background-image: linear-gradient(pink, blue, gold);
     background-attachment: fixed;
+    font-family: 'Kanit', sans-serif;
 }
 
 
@@ -37,6 +68,16 @@ figure img {
     max-height: 50%;
 }
 
+#menus {
+    text-align: center;
+    margin: auto;
+}
+
+img {
+    width: 50%;
+    align-self: center;
+}
+
 .mobile {
     background: yellow;
 }
@@ -48,7 +89,6 @@ figure img {
 nav section {
 	border:2px solid black;
     margin-bottom: 15px;
-    font-family: 'Kanit', sans-serif;
     font-size: 1.2rem;
 }
 
@@ -56,6 +96,9 @@ nav section p {
     padding: 3px;
 }
 
+nav section a {
+    color: red;
+}
 
 /* Class for making YouTube/Vimeo videos responsive */
 
