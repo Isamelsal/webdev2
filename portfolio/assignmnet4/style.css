@@ -1,0 +1,209 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
+
+body {
+	margin: 15px;
+    font-family: 'Trebuchet MS';
+    font-size: 16px;
+    background-color: white;
+}
+
+main {
+    padding: 10px;
+}
+
+#p1 {
+    position: relative;
+    animation: mymove 5s infinite;
+    animation-delay: 10s;
+}
+
+#p2 {
+    position: relative;
+    animation: mymove2 10s infinite;
+    animation-delay: 10s;
+}
+
+#p3 {
+    position: relative;
+    animation: mymove3 15s infinite;
+    animation-delay: 10s;
+}
+
+#p4 {
+    position: relative;
+    animation: mymove4 20s infinite;
+    animation-delay: 10s;
+}
+
+#p5 {
+    position: relative;
+    animation: mymove5 25s infinite;
+    animation-delay: 10s;
+}
+
+#p6 {
+    position: relative;
+    animation: mymove6 30s infinite;
+    animation-delay: 10s;
+}
+
+#p7 {
+    position: relative;
+    animation: mymove7 35s infinite;
+    animation-delay: 10s;
+}
+
+#p1:hover {
+    font-size: 50px;
+}
+
+@keyframes mymove {
+    0%   {left: 0px;}
+    25%  {left: 200px;}
+    75%  {left: 50px}
+    100% {left: 100px;}
+  }
+
+@keyframes mymove2 {
+    0%   {right: 0px;}
+    25%  {right: 200px;}
+    75%  {right: 50px}
+    100% {right: 100px;}
+  }
+
+@keyframes mymove3 {
+    0%   {bottom: 0px;}
+    25%  {bottom: 200px;}
+    75%  {bottom: 50px}
+    100% {bottom: 100px;}
+  }
+
+@keyframes mymove4 {
+    0%   {top: 0px;}
+    25%  {top: 200px;}
+    75%  {top: 50px}
+    100% {top: 100px;}
+  }
+
+@keyframes mymove5 {
+    0%   {rotate: 20deg;}
+    25%  {rotate: 40deg;}
+    75%  {rotate: 60deg;}
+    100% {rotate: 200deg;}
+}
+@keyframes mymove6 {
+    0%   {rotate: -20deg;}
+    25%  {rotate: -40deg;}
+    75%  {rotate: -60deg;}
+    100% {rotate: -200deg;}
+  }
+
+@keyframes mymove7 {
+    0%   {top: 0px;}
+    25%  {top: 200px;}
+    75%  {top: 50px}
+    100% {top: 100px;}
+  }
+
+#container {
+	border: 1px dotted blue;
+    padding: 1em;
+}
+
+header {
+    background: purple;
+    color: white;
+    padding: 10px;
+}
+
+footer {
+    background: green;
+    color: white;
+    padding: 10px;
+}
+
+header:hover {
+    background: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer:hover {
+    width: 1000rem;
+}
+
+figure {
+    margin: auto;
+    text-align: center;
+}
+
+img:hover{
+    width: 200%
+}
+
+/* Class for making YouTube/Vimeo videos responsive */
+
+figure.responsive {
+    position: relative;
+    padding-bottom: 56.25%;  /* 16:9 */
+    height: 0px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+figure.responsive iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* A better looking default horizontal rule */
+hr {
+    display: block;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #ccc;
+    margin: 1em 0px;
+    padding: 0px;
+}
+
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for iPads and tablets.  */
+@media all and (min-width: 481px) {
+
+} /* closes 481px+ */
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+
+} /* closes 769px+ */
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+	#container {
+        width: 900px;
+        margin: auto;
+    }
+} /* closes 1024px+ */
