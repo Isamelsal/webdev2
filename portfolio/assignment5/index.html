@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src=""></script>
+    <title>Assignment 5</title>
+</head>
+<body id="container">
+    <div>
+        <header>
+            <h1>KITTEN IMAGES!!!</h1>
+        </header>
+
+        <main>
+            <nav>
+                <p>Cute pictures of my cat shadow when he was just a little kitten.</p>
+                <section>
+                    <button id = "button1" type = "button">Show</button>
+                    <button id = "button2" type = "button">Hide</button>
+                    <figure class = "response" id = "smallshadow1">
+                        <img src="smallshadow1.JPG" alt="Shadow">
+                    </figure>
+                </section>
+
+                <section>
+                    <button id = "button3" type = "button">Show</button>
+                    <button id = "button4" type = "button">Hide</button>
+                    <figure class = "response" id = "smallshadow2">
+                        <img src="smallshadow2.JPG" alt="Shadow">
+                    </figure>
+                </section>
+
+                <section>
+                    <button id = "button5" type = "button">Show</button>
+                    <button id = "button6" type = "button">Hide</button>
+                    <figure class = "response" id = "smallshadow3">
+                        <img src="smallshadow3.JPG" alt="Shadow">
+                    </figure>
+                </section>
+            </nav>
+        </main>
+
+
+
+    </div><!-- close "container" -->
+    
+    <!-- Link to jQuery on Google CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    
+    
+    <!-- Write your jQuery code inside of the .ready() function below -->
+    <script>
+        $(document).ready(function() {
+            $('figure#smallshadow1').hide();
+
+            $('figure#smallshadow2').hide();
+
+            $('figure#smallshadow3').hide();
+
+            $('button#button1').click(function() {
+                $('figure#smallshadow1').show();
+
+            });
+
+            $('button#button2').click(function() {
+                $('figure#smallshadow1').hide();
+
+            });
+
+            $('button#button3').click(function() {
+                $('figure#smallshadow2').show();
+
+            });
+
+            $('button#button4').click(function() {
+                $('figure#smallshadow2').hide();
+
+            });
+
+            $('button#button5').click(function() {
+                $('figure#smallshadow3').show();
+
+            });
+
+            $('button#button6').click(function() {
+                $('figure#smallshadow3').hide();
+
+            });
+            
+        });
+  </script>
+</body>
+</html>
