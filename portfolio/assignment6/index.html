@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Assignment 6</title>
+</head>
+
+<body>
+  <div id="container">
+
+    <header>
+      <h1>More of My Cat</h1>
+    </header>
+
+    <div id="cat1"></div>
+
+    <section id="one">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio quibusdam atque reiciendis officia qui minus
+        numquam voluptatum quaerat ut ipsum rerum harum, libero eaque voluptates est ad nam vero accusamus. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Sapiente esse natus aliquid autem, maiores minus consequatur
+        aperiam laudantium eius tempora inventore numquam molestias eaque iure quae dolor ipsa fugiat culpa. Lorem ipsum
+        dolor sit amet consectetur, adipisicing elit. Praesentium iure incidunt est sit, nihil corporis veritatis ab
+        culpa? Voluptatem repellat ratione laudantium quasi. Accusamus distinctio nemo voluptates velit debitis aut?</p>
+    </section>
+
+    <div id="cat2"></div>
+
+    <section id="two">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod quia sequi nobis enim voluptatum omnis. Veniam,
+        asperiores quasi, blanditiis ipsa natus impedit velit officiis sapiente facere, exercitationem sequi expedita
+        iste! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil illo, accusantium harum amet repellendus
+        expedita, neque minus ut voluptatibus ad excepturi corporis eius! Iste cumque at rem nostrum quis eveniet?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, cumque impedit culpa voluptatibus quis dolor
+        tempore, itaque libero praesentium molestias doloremque quae repudiandae quidem quo voluptate illo optio quas.
+        Atque.</p>
+    </section>
+
+    <div id="cat3"></div>
+
+    <section id="three">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate nihil fuga esse, accusamus delectus quo
+        tenetur saepe iusto vitae ipsum blanditiis laudantium dolorem illum dolor adipisci est dignissimos sint vel?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio unde asperiores molestiae. A fuga repellat
+        beatae labore sequi ea. Eum accusantium aliquam autem repellendus animi provident magni suscipit architecto
+        delectus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Error laborum, itaque quibusdam accusantium
+        sunt eius. Beatae placeat hic voluptate quidem culpa dolorem ullam cumque possimus, quisquam et, aliquam atque
+        exercitationem?</p>
+    </section>
+
+    <div id = "cat4"></div>
+
+
+
+
+  </div><!-- close "container" -->
+
+  <!-- Link to jQuery on Google CDN-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+  <!-- Write your jQuery code inside of the .ready() function below -->
+  <script>
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        var windowPosition = $(window).scrollTop();
+
+        if (windowPosition>1000) {
+				$('section').css('font-family','Time New Roman');
+				} else {
+				$('section').css('font-family','Courier New');
+        }
+
+        if (windowPosition>1000) {
+				$('section').css('background','black');
+				} else {
+				$('section').css('background','tan');
+        }
+
+        if (windowPosition>2000) {
+				$('section').css('font-size','30px');
+        $('section').css('line-height','40px');
+        $('section').css('background','red');
+        $('section').css('color','white');
+				} else {
+				$('section').css('font-size','');
+        }
+
+
+      }); //close.scroll
+
+    }); //close .ready()
+  </script>
+</body>
+
+</html>
